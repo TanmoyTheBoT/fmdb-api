@@ -161,8 +161,6 @@ const config = {
   }
 };
 
-// Serve config.js file
-
 // --------------------- Helper Functions ---------------------
 const mapFields = (data) => {
   return Object.entries(data).reduce((acc, [key, value]) => {
