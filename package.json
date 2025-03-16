@@ -1,0 +1,20 @@
+{
+  "name": "fmdb-api",
+  "version": "1.0.0",
+  "description": "API for FMDb data",
+  "main": "app.js",
+  "scripts": {
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
