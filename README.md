@@ -1,8 +1,10 @@
 ---
+
 # FMDb API
 ## The Free Movie Database
 
-FMDb API is a Node.js backend that provides access to movie data stored in an IMDb-based MySQL database. The API includes endpoints for IMDb lookup, title search, aggregate statistics, and user registration to obtain an API key. It features secure API key validation, role-based rate limiting, and a static documentation page.
+FMDb API is a Node.js backend that provides access to movie data stored in an !MDb-based MySQL database. The API includes endpoints for IMDb lookup, title search, aggregate statistics, and user registration to obtain an API key. It features secure API key validation, role-based rate limiting, and a static documentation page.
+
 ---
 
 ## Table of Contents
