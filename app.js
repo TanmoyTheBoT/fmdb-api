@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors'); // Import the cors middleware
 const express = require('express');
 const morgan = require('morgan');
 const mysql = require('mysql2/promise');
@@ -9,6 +10,8 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(cors());
 
 // Enable JSON and URL-encoded body parsing
 app.use(express.json());
@@ -153,18 +156,35 @@ const config = {
     imdb_id: 'imdbID',
     title: 'Title',
     release_year: 'Year',
+    release_date: 'Released',
+    content_rating: 'Rated',
+    runtime: 'Runtime',
     type: 'Type',
     poster: 'Poster',
     genres: 'Genre',
     director: 'Director',
-    actors: 'Actors'
+    writer: 'Writer',
+    actors: 'Actors',
+    plot: 'Plot',
+    country: 'Country',
+    language: 'Language',
+    awards: 'Awards',
+    metascore: 'Metascore',
+    imdb_rating: 'imdbRating',
+    imdb_votes: 'imdbVotes',
+    box_office: 'BoxOffice',
+    episodes: 'Episodes',
+    total_seasons: 'totalSeasons',
+    season: 'Season',
+    episode: 'Episode',
+    series_id: 'seriesID'
   }
 };
 
 // --------------------- Helper Functions ---------------------
 const mapFields = (data) => {
   return Object.entries(data).reduce((acc, [key, value]) => {
-    if (value !== null) {
+    if (value !== null && value !== '') {
       acc[config.fieldMappings[key] || key] = value;
     }
     return acc;
